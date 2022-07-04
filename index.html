@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>LP Finance | @lpfinance/solana-sdk: @lpfinance/solana-sdk</title>
+    <title>LP Finance | @lpfinance/lpfinance-solana-sdk: @lpfinance/lpfinance-solana-sdk</title>
 
     <link rel="icon" href="https://test.lp.finance/images/MLogo.png" />
    
@@ -20,7 +20,7 @@
 
 <div id="main">
 
-    <h2 class="page-title">@lpfinance/solana-sdk</h2>
+    <h2 class="page-title">@lpfinance/lpfinance-solana-sdk</h2>
 
     
 
@@ -47,7 +47,7 @@
 
     <section>
         <article><h2>Installation</h2>
-<pre class="prettyprint source"><code>yarn add @lpfinance/solana-sdk
+<pre class="prettyprint source"><code>yarn add @lpfinance/lpfinance-solana-sdk
 </code></pre>
 <h1>LP Finance Library</h1>
 <p><strong>This is the LP Finance javascript library to interact with https://test.lp.finance.</strong></p>
@@ -99,7 +99,7 @@ module.exports = function override(config) {
 <ul>
 <li><strong>First Create a wallet using private key to perform Transaction and get details.Private key should be in bytes.</strong></li>
 </ul>
-<pre class="prettyprint source"><code>import { useWallet } from &quot;@lpfinance/solana-sdk&quot;;
+<pre class="prettyprint source"><code>import { useWallet } from &quot;@lpfinance/lpfinance-solana-sdk&quot;;
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
@@ -109,7 +109,7 @@ const App = () => {
 <ul>
 <li><strong>Use <code>useCBSProtocolOverview</code> hook to get cbs system details.</strong></li>
 </ul>
-<pre class="prettyprint source"><code>import { useWallet, useCBSProtocolOverview } from &quot;@lpfinance/solana-sdk&quot;;
+<pre class="prettyprint source"><code>import { useWallet, useCBSProtocolOverview } from &quot;@lpfinance/lpfinance-solana-sdk&quot;;
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
@@ -121,7 +121,7 @@ const App = () => {
 <ul>
 <li><strong>Use <code>useAuctionProtocolOverview</code> hook to get cbs system details.</strong></li>
 </ul>
-<pre class="prettyprint source"><code>import { useWallet, useAuctionProtocolOverview } from &quot;@lpfinance/solana-sdk&quot;;
+<pre class="prettyprint source"><code>import { useWallet, useAuctionProtocolOverview } from &quot;@lpfinance/lpfinance-solana-sdk&quot;;
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
@@ -134,7 +134,7 @@ const App = () => {
 <li><strong>get LiquidateList using <code>getLiquidateList</code> hook to get cbs system details.</strong></li>
 </ul>
 <pre class="prettyprint source"><code>import React, { useState, useEffect } from &quot;react&quot;;
-import { getLiquidateList } from &quot;@lpfinance/solana-sdk&quot;;
+import { getLiquidateList } from &quot;@lpfinance/lpfinance-solana-sdk&quot;;
 
 const App = () => {
 
@@ -156,7 +156,7 @@ const App = () => {
 <ul>
 <li><strong>get CBS user account details using <code>useCBSUserAccount</code> hook.</strong></li>
 </ul>
-<pre class="prettyprint source"><code>import { useWallet, useCBSUserAccount } from &quot;@lpfinance/solana-sdk&quot;;
+<pre class="prettyprint source"><code>import { useWallet, useCBSUserAccount } from &quot;@lpfinance/lpfinance-solana-sdk&quot;;
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
@@ -167,7 +167,7 @@ const App = () => {
 <ul>
 <li><strong>get Auction user account details using <code>useAuctionUserAccount</code> hook.</strong></li>
 </ul>
-<pre class="prettyprint source"><code>import { useWallet, useAuctionUserAccount } from &quot;@lpfinance/solana-sdk&quot;;
+<pre class="prettyprint source"><code>import { useWallet, useAuctionUserAccount } from &quot;@lpfinance/lpfinance-solana-sdk&quot;;
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
@@ -177,7 +177,7 @@ const App = () => {
 </code></pre>
 <h3>- <strong>Use CBS Transaction Functions -</strong></h3>
 <p><strong>a) Deposit - Use depositCBS function and TokenName should be &quot;SOL&quot;, &quot;lpUSD&quot;, &quot;lpSOL&quot;, &quot;lpBTC&quot;, &quot;lpETH&quot;, &quot;USDC&quot;, &quot;BTC&quot;, &quot;mSOL&quot;, &quot;ETH&quot;, &quot;UST&quot;, &quot;SRM&quot;, &quot;scnSOL&quot;, &quot;stSOL&quot;, &quot;USDT&quot;.</strong></p>
-<pre class="prettyprint source"><code>import { useWallet, depositCBS } from &quot;@lpfinance/solana-sdk&quot;;
+<pre class="prettyprint source"><code>import { useWallet, depositCBS } from &quot;@lpfinance/lpfinance-solana-sdk&quot;;
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
@@ -194,7 +194,7 @@ const App = () => {
 }
 </code></pre>
 <p><strong>b) Borrow - Use borrowCBS function and TokenName should be &quot;lpUSD&quot;, &quot;lpSOL&quot;, &quot;lpBTC&quot;, &quot;lpETH&quot;.</strong></p>
-<pre class="prettyprint source"><code>import { useWallet, borrowCBS } from &quot;@lpfinance/solana-sdk&quot;;
+<pre class="prettyprint source"><code>import { useWallet, borrowCBS } from &quot;@lpfinance/lpfinance-solana-sdk&quot;;
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
@@ -211,7 +211,7 @@ const App = () => {
 }
 </code></pre>
 <p><strong>c) Withdraw - Use withdrawCBS function and TokenName should be &quot;SOL&quot;, &quot;lpUSD&quot;, &quot;lpSOL&quot;, &quot;lpBTC&quot;, &quot;lpETH&quot;, &quot;USDC&quot;, &quot;BTC&quot;, &quot;mSOL&quot;, &quot;ETH&quot;, &quot;UST&quot;, &quot;SRM&quot;, &quot;scnSOL&quot;, &quot;stSOL&quot;, &quot;USDT&quot;.</strong></p>
-<pre class="prettyprint source"><code>import { useWallet, withdrawCBS } from &quot;@lpfinance/solana-sdk&quot;;
+<pre class="prettyprint source"><code>import { useWallet, withdrawCBS } from &quot;@lpfinance/lpfinance-solana-sdk&quot;;
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
@@ -228,7 +228,7 @@ const App = () => {
 }
 </code></pre>
 <p><strong>d) Repayment - Use repayCBS function and TokenName should be &quot;SOL&quot;, &quot;lpUSD&quot;, &quot;lpSOL&quot;, &quot;lpBTC&quot;, &quot;lpETH&quot;, &quot;USDC&quot;, &quot;BTC&quot;, &quot;ETH&quot;.</strong></p>
-<pre class="prettyprint source"><code>import { useWallet, repayCBS } from &quot;@lpfinance/solana-sdk&quot;;
+<pre class="prettyprint source"><code>import { useWallet, repayCBS } from &quot;@lpfinance/lpfinance-solana-sdk&quot;;
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
@@ -246,7 +246,7 @@ const App = () => {
 </code></pre>
 <h3>- <strong>Use Auction Transaction Functions -</strong></h3>
 <p><strong>a) Deposit - Use depositAuction function and &quot;lpUSD&quot; is default token to perform deposit.</strong></p>
-<pre class="prettyprint source"><code>import { useWallet, depositAuction } from &quot;@lpfinance/solana-sdk&quot;;
+<pre class="prettyprint source"><code>import { useWallet, depositAuction } from &quot;@lpfinance/lpfinance-solana-sdk&quot;;
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
@@ -263,7 +263,7 @@ const App = () => {
 }
 </code></pre>
 <p><strong>a) Withdraw - Use withdrawAuction function and &quot;lpUSD&quot; is default token to perform withdraw.</strong></p>
-<pre class="prettyprint source"><code>import { useWallet, withdrawAuction } from &quot;@lpfinance/solana-sdk&quot;;
+<pre class="prettyprint source"><code>import { useWallet, withdrawAuction } from &quot;@lpfinance/lpfinance-solana-sdk&quot;;
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
@@ -282,7 +282,7 @@ const App = () => {
 <ul>
 <li><strong>Liquidate - Use liquidateAccount function</strong></li>
 </ul>
-<pre class="prettyprint source"><code>import { useWallet, liquidateAccount } from &quot;@lpfinance/solana-sdk&quot;;
+<pre class="prettyprint source"><code>import { useWallet, liquidateAccount } from &quot;@lpfinance/lpfinance-solana-sdk&quot;;
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
@@ -308,13 +308,13 @@ const App = () => {
 </div>
 
 <nav>
-    <h3><a href="index.html">@lpfinance/solana-sdk</a></h3><h3>Modules</h3><ul><li><a href="module-AuctionTransaction.html">AuctionTransaction</a></li><li><a href="module-BorrowTransaction.html">BorrowTransaction</a></li><li><a href="module-LiquidateTransaction.html">LiquidateTransaction</a></li></ul><h3>Global</h3><ul><li><a href="global.html#getAPY">getAPY</a></li><li><a href="global.html#getLastEpochProfit">getLastEpochProfit</a></li><li><a href="global.html#getLiquidateList">getLiquidateList</a></li><li><a href="global.html#getLiquidatorFunds">getLiquidatorFunds</a></li><li><a href="global.html#useAuctionProtocolOverview">useAuctionProtocolOverview</a></li><li><a href="global.html#useAuctionUserAccount">useAuctionUserAccount</a></li><li><a href="global.html#useCBSProtocolOverview">useCBSProtocolOverview</a></li><li><a href="global.html#useCBSUserAccount">useCBSUserAccount</a></li><li><a href="global.html#useWallet">useWallet</a></li></ul>
+    <h3><a href="index.html">@lpfinance/lpfinance-solana-sdk</a></h3><h3>Modules</h3><ul><li><a href="module-AuctionTransaction.html">AuctionTransaction</a></li><li><a href="module-BorrowTransaction.html">BorrowTransaction</a></li><li><a href="module-LiquidateTransaction.html">LiquidateTransaction</a></li></ul><h3>Global</h3><ul><li><a href="global.html#getAPY">getAPY</a></li><li><a href="global.html#getLastEpochProfit">getLastEpochProfit</a></li><li><a href="global.html#getLiquidateList">getLiquidateList</a></li><li><a href="global.html#getLiquidatorFunds">getLiquidatorFunds</a></li><li><a href="global.html#useAuctionProtocolOverview">useAuctionProtocolOverview</a></li><li><a href="global.html#useAuctionUserAccount">useAuctionUserAccount</a></li><li><a href="global.html#useCBSProtocolOverview">useCBSProtocolOverview</a></li><li><a href="global.html#useCBSUserAccount">useCBSUserAccount</a></li><li><a href="global.html#useWallet">useWallet</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Mon Jun 27 2022 10:37:46 GMT+0530 (India Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Mon Jul 04 2022 16:07:49 GMT+0530 (India Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>
